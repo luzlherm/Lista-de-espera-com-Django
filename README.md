@@ -26,3 +26,6 @@ As dependências do projeto podem ser instaladas com o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
+
+## Endereço
+http://127.0.0.1:8000/usuarios/ver_usuarios/
