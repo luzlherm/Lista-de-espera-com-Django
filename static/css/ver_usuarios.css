@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/* Importa a fonte 'Russo One' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* Define a fonte 'kremlin' */
+@font-face {
+    font-family: "kremlin";
+    src: url('../fonte/kremlin.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Define a fonte 'cyber2' */
+@font-face {
+    font-family: "cyber2";
+    src: url('../fonte/cyberv2.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Define a fonte 'crazyivan' */
+@font-face {
+    font-family: "crazyivan";
+    src: url('../fonte/crazyivan.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Variáveis de cores e fontes */
+:root {
+    --corcorpo: #8b253e;
+    --cortexto: #e3dede;
+    --cor2: #201d1d;
+    --cor3: black;
+    --cornav: #201d1d;
+    --cor5: #012e14;
+    --cor6: #0f0f0f;
+
+    --fonte-titulo: "kremlin", sans-serif;
+    --fonte-alternativa:"crazyivan";
+    --fonte-alternativa2:"cyber2";
+    --fonte-subtitulo: sans-serif;
+    --fonte-base: verdana, sans-serif;
+}
+
+/* Zera margens, preenchimentos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+    background-color: var(--corcorpo);
+    margin: 5px 5px;
+    font-family: var(--fonte-base);
+}
+
+/* Estilos gerais para o conteúdo do header */
+.header-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 10%;
+}
+
+/* Define tamanho máximo da logo */
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-right: 5px;
+}
+
+/* Estilos do título principal */
+header h1 {
+    font-family: var(--fonte-titulo);
+    color: var(--cortexto);
+    font-size: 6vw; /* Tamanho dinâmico para ser responsivo */
+    margin: 5px 10px;
+    text-shadow: 2px 10px 0px rgba(0, 0, 0, 0.356);
+    word-wrap: break-word; /* Permite que o título quebre em várias linhas */
+    text-align: center; /* Centraliza o texto em telas menores */
+}
+
+/* Estilos do subtítulo */
+header h2 {
+    font-family: var(--fonte-alternativa);
+    font-size: 1.5em;
+    color: var(--cor2);
+    text-align: center;
+    margin: 10px;
+}
+
+/* Estilos para o nav (barra de navegação) */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links quebrem em múltiplas linhas */
+    width: 100%;
+    height: auto;
+    background-color: var(--cornav);
+    padding: 4px;
+}
+
+/* Estilos para links do menu de navegação */
+nav a {
+    color: var(--cortexto);
+    font-family: var(--fonte-alternativa);
+    padding: 10px 10px 5px 40px;
+    text-decoration: none;
+    margin-right: 45px;
+    transition: color 0.5s, transform 0.3s;
+    text-align: center; /* Centraliza os links */
+    flex: 1 1 100px; /* Faz com que os links se ajustem ao espaço disponível */
+}
+
+/* Efeito hover nos links do menu */
+nav a:hover {
+    color: blue;
+    transform: scale(1.1);
+}
+
+/* Estilos para o menu de redes sociais */
+.social-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: auto;
+    filter: grayscale(100%);
+    margin-top: 5px;
+}
+
+/* Estilos para os links das redes sociais */
+.social-menu a {
+    margin-right: 15px;
+    color: var(--cornav);
+    transition: color 0.3s ease;
+}
+
+/* Ajusta o tamanho dos ícones SVG das redes sociais */
+.social-menu svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover nos ícones SVG */
+.social-menu a:hover svg {
+    fill: blue;
+    transform: scale(1.1);
+}
+
+/* Estilos gerais para o conteúdo principal */
+main {
+    font-family: var(--fonte-subtitulo);
+    font-size: 1em;
+    color: rgb(251, 246, 237);
+    text-align: justify;
+    margin: 10px;
+}
+
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-alternativa2);
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cornav);
+    box-shadow: 5px 5px 10px black;
+}
+
+/* Estilos para os campos de texto, e-mail e número do formulário */
+input[type="text"], input[type="email"], input[type="number"] {
+    font-family: var(--fonte-base);
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* Estilos para o botão de envio do formulário */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #8b253e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão de envio */
+input[type="submit"]:hover {
+    background-color: #012e14;
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--cor2);
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+/* Media queries para telas pequenas (até 600px) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 4vw; /* Tamanho dinâmico ainda menor para caber em telas pequenas */
+    }
+
+    header h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column; /* Transforma o menu em uma coluna em vez de linha */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Adiciona espaço entre os itens do menu */
+        padding: 10px 0;
+        flex: 1 1 auto; /* Ajusta a flexibilidade para distribuir os itens */
+    }
+}
+
+/* Media queries para telas médias (601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    nav a {
+        margin-right: 20px;
+        font-size: 1em;
+    }
+
+    .social-menu svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    form {
+        width: 70%;
+    }
+}
